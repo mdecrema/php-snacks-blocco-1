@@ -9,33 +9,24 @@
 
     $results = "";
       $matches = [
-        "match_1" => [
-          "milano" => 90,
-          "verona" => 110
-        ],
-        "match_2" => [
-          "bologna" => 95,
-          "cagliari" => 81
-        ],
-        "match_3" => [
-          "roma" => 88,
-          "venezia" => 102
-        ],
-        "match_4" => [
-          "sassari" => 104,
-          "perugia" => 87
-        ],
-        "match_5" => [
-          "napoli" => 78,
-          "firenze" => 92
-        ]
+        ["milano", 90, "verona", 110],
+        ["bologna", 95, "cagliari", 81],
+        ["roma", 88, "venezia", 102],
+        ["sassari", 104, "perugia", 87],
+        ["napoli", 78, "firenze", 92]
       ];
 
-
-      echo key($matches);
-      //return $results;
+      $team = "";
+      $result = 0;
+      for ($i=0; $i<=4; $i++) {
+         $team .= $matches[$i][0];
+      }
+      echo $team;
     ?>
 
+    <ul>
+
+    </ul>
 
   </body>
 </html>
