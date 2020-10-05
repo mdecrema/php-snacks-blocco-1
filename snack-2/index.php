@@ -13,11 +13,25 @@
 
     $result = "";
     if (!empty($nome) && !empty($mail) && !empty($anni)) {
-      if (strlen($nome)>3)
-
-      $result = $nome." ".$mail." ".$anni;
+        if (nome()) {
+            $result = $nome." ".$mail." ".$anni;
+        } else if {
+            $result = "SBAGLIATO";
+        }
+        echo $result;
     }
 
+    function nome() {
+      $bool = false;
+      if (strlen($nome))>3) {
+        $bool = true;
+      } elseif (strlen($nome)<=3) {
+        $bool = false;
+      }
+      return $bool;
+    }
+
+    //function mail
     ?>
 
     <h2><?php echo $result ?></h2>
