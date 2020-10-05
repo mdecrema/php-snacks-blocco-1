@@ -19,7 +19,7 @@
       $home_team = "";
       $result = 0;
       for ($i=0; $i<=4; $i++) {
-         $home_team .= "<li>".$matches[$i][0]."</li>";
+         $home_team .= "<li>".$matches[$i][0]." - ".$matches[$i][1]." | ".$matches[$i][2]." - ".$matches[$i][3]."</li>";
 
       }
 
