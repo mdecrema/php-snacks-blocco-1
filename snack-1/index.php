@@ -16,17 +16,15 @@
         ["napoli", 78, "firenze", 92]
       ];
 
-      $home_team = "";
-      $result = 0;
+      $result = "";
       for ($i=0; $i<=4; $i++) {
-         $home_team .= "<li>".$matches[$i][0]." - ".$matches[$i][2]." | ".$matches[$i][1]." - ".$matches[$i][3]."</li>";
-
+         $result .= "<li>".$matches[$i][0]." - ".$matches[$i][2]." | ".$matches[$i][1]." - ".$matches[$i][3]."</li>";
       }
 
     ?>
 
     <ul>
-      <?php echo $home_team ?>
+      <?php echo $result ?>
     </ul>
 
   </body>
