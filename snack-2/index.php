@@ -12,8 +12,10 @@
     $anni = 64;
 
     $result = "";
-    if (!empty($nome)) {
-      $result .= $nome;
+    if (!empty($nome) && !empty($mail) && !empty($anni)) {
+      if (strlen($nome)>3)
+
+      $result = $nome." ".$mail." ".$anni;
     }
 
     ?>
