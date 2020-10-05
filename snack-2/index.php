@@ -13,19 +13,19 @@
 
     $result = "";
     if (!empty($nome) && !empty($mail) && !empty($anni)) {
-        if (nome()) {
+        if (nome($nome)) {
             $result = $nome." ".$mail." ".$anni;
-        } else if {
+        } else if (nome($nome) == false) {
             $result = "SBAGLIATO";
         }
         echo $result;
     }
 
-    function nome() {
+    function nome($testo) {
       $bool = false;
-      if (strlen($nome))>3) {
+      if (strlen($testo) > 3) {
         $bool = true;
-      } elseif (strlen($nome)<=3) {
+      } elseif (strlen($testo) <= 3) {
         $bool = false;
       }
       return $bool;
