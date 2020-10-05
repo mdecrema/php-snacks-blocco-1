@@ -13,12 +13,12 @@
 
     $result = "";
     if (!empty($nome) && !empty($mail) && !empty($anni)) {
-        if (nome($nome)) {
+        if (nome($nome) && mail($mail)) {
             $result = $nome." ".$mail." ".$anni;
-        } else if (nome($nome) == false) {
+        } else {
             $result = "SBAGLIATO";
         }
-        echo $result;
+        //echo $result;
     }
 
     function nome($testo) {
@@ -26,6 +26,16 @@
       if (strlen($testo) > 3) {
         $bool = true;
       } elseif (strlen($testo) <= 3) {
+        $bool = false;
+      }
+      return $bool;
+    }
+
+    function mail($testo_mail) {
+      $bool = false;
+      if (strpos($testo_mail, ".") && strpos($testo_mail, "@")) {
+        $bool = true;
+      } else {
         $bool = false;
       }
       return $bool;
