@@ -8,15 +8,15 @@
 
     <?php
     $nome = "marco";
-    $mail = "marco@hotmail.com";
+    $mail = "marcohotmail.com";
     $anni = 64;
 
     $result = "";
     if (!empty($nome) && !empty($mail) && !empty($anni)) {
-        if (nome($nome) && mail($mail)) {
-            $result = $nome." ".$mail." ".$anni;
+        if (nome($nome) && email($mail) && eta($anni)) {
+            $result = "Accesso riuscito";
         } else {
-            $result = "SBAGLIATO";
+            $result = "Accesso negato";
         }
         //echo $result;
     }
@@ -31,9 +31,19 @@
       return $bool;
     }
 
-    function mail($testo_mail) {
+    function email($testo_mail) {
       $bool = false;
       if (strpos($testo_mail, ".") && strpos($testo_mail, "@")) {
+        $bool = true;
+      } else {
+        $bool = false;
+      }
+      return $bool;
+    }
+
+    function eta($num) {
+      $bool = false;
+      if (!is_nan($num)) {
         $bool = true;
       } else {
         $bool = false;
