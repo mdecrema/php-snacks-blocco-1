@@ -7,7 +7,6 @@
   <body>
     <?php
 
-    $results = "";
       $matches = [
         ["milano", 90, "verona", 110],
         ["bologna", 95, "cagliari", 81],
